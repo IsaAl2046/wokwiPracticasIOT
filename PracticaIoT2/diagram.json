@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "MARIA ISABEL ALVAREZ MORENO",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 67.8, "left": 18.6, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -32.2,
+      "left": 124.8,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 3.95,
+      "left": 28.8,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "btn1:2.r", "uno:2", "green", [ "h0" ] ],
+    [ "btn1:1.r", "uno:5V", "red", [ "h125", "v297.6", "h-138.2" ] ],
+    [ "btn1:2.l", "r1:2", "black", [ "h0" ] ],
+    [ "r1:1", "uno:GND.1", "black", [ "v38.4", "h105.3" ] ]
+  ],
+  "dependencies": {}
+}

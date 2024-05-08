@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "MARIA ISABEL ALVAREZ MORENO",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 102.2,
+      "left": 201.6,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 167.15,
+      "left": 124.8,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "r1:1", "esp:GND.1", "black", [ "v0" ] ],
+    [ "btn1:2.r", "r1:2", "black", [ "h0.2", "v29", "h-76.8" ] ],
+    [ "btn1:2.l", "esp:D4", "green", [ "h-86.4", "v-19" ] ],
+    [ "btn1:1.r", "esp:3V3", "red", [ "v0", "h9.8", "v76.8", "h-163.2", "v-38.4" ] ]
+  ],
+  "dependencies": {}
+}

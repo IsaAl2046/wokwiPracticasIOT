@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "MARIA ISABEL ALVAREZ MORENO",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -90,
+      "left": 71,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -53.65,
+      "left": 9.6,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "led1:C", "r1:2", "black", [ "v0" ] ],
+    [ "r1:1", "uno:GND.1", "black", [ "v19.2", "h105.9" ] ],
+    [ "led1:A", "uno:12", "red", [ "h38.4", "v57" ] ]
+  ],
+  "dependencies": {}
+}
